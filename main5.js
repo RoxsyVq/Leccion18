@@ -1,17 +1,20 @@
-function stringMultiplicar(n) {
-var rpt=1;
-var multi="";
-    for(i=1; i<=10; i++){
-        
-        rpt=n*i;
-       
-        if(i<10){
-            multi+=n+"x"+i+"="+rpt+"/";
+function casiPalindrome(palabra) {
+    var tam=palabra.length;
+    var palindrome;
+    var count=0;
+    for(var i=0, j=tam-1; i<tam/2, j>tam/2; i++, j--){
+        if(palabra[i]!=palabra[j]){
+            count ++;
+        }
+    }
+        if(count<=2){
+            palindrome=true;
+            
         }
         else{
-           multi+=n+"x"+i+"="+rpt; 
-        }
+            palindrome=false;
+        
         
     }
-    return multi;
+    return palindrome;
 }
